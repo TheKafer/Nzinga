@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from apps.usuario import views
 
 urlpatterns = [
-    path('registroEntidad/',views.registroEntidad,name='registroEntidad'),
-
+    #path('registroEntidad/',RegistroEntidad.as_view(),name='RegistroEntidad'), ejemplo de una clase vista
+    path('registroEntidad/',views.registroEntidad,name='RegistroEntidad'),
+   
 ]
