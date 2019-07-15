@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 #Modelo de la entidad
 class Entity(models.Model):
 	iduser = models.IntegerField(primary_key=True)
+	
 
 #Modelo que contiene la información de la entidad
 class Info_Entity(models.Model):
