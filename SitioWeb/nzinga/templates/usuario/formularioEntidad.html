@@ -1,15 +1,22 @@
+{% load staticfiles%}
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Registro Entidad</title>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 	<meta name="author" content="Kafer">
+	<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
 </head>
 <body>
-	<p>Hello madafacka!</p>
+<div class="container">	
 	<form method="post">
 		{% csrf_token %}
-		{{ form.as_p}}
-		{{ formEntidad.as_p}}
-		<button type="submit">Sign up</button>
+		{{form.as_p}}
+		{{formEntidad.as_p}}
+		<button class="btn btn-primary"type="submit">Registrar</button>
 	</form>
+</div>
 </body>
 </html>

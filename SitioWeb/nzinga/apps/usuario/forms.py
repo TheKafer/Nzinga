@@ -14,6 +14,8 @@ class RegistroUsuario(UserCreationForm):
 				'first_name',
 				'last_name',
 				'email',
+				'password1',
+				
 
 			]
 		labels = {
@@ -21,9 +23,21 @@ class RegistroUsuario(UserCreationForm):
 				'first_name':'Nombre',
 				'last_name': 'Apellidos',
 				'email':'Correo',
-
+				'password1':'Contraseña',
+				
 
 		}
+		widgets = {
+				'username': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Usuario'}),
+				'first_name': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Nombre'}),
+				'last_name': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Apellido'}),
+				'email': forms.TextInput(attrs={'class':'form-control', 'placeholder':'example@gmail.com'}),
+				'password1':forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'contraseña'}),
+				
+		}
+
+
+
 
 class RegistroEntidad(forms.ModelForm):
 
@@ -37,5 +51,5 @@ class RegistroEntidad(forms.ModelForm):
 				'name':'Nombre de la entidad',
 		}
 		widgets = {
-				'name': forms.TextInput(attrs={'class':'form-control'}),
+				'name': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Ejm Universidad de las lagartijas'}),
 		}
