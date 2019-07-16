@@ -9,12 +9,14 @@ class RegistroUsuario(UserCreationForm):
 
 	class Meta:
 		model = User
+		
 		fields = [
 				'username',
 				'first_name',
 				'last_name',
 				'email',
 				'password1',
+				
 				
 
 			]
@@ -25,6 +27,7 @@ class RegistroUsuario(UserCreationForm):
 				'email':'Correo',
 				'password1':'Contraseña',
 				
+				
 
 		}
 		widgets = {
@@ -32,7 +35,8 @@ class RegistroUsuario(UserCreationForm):
 				'first_name': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Nombre'}),
 				'last_name': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Apellido'}),
 				'email': forms.TextInput(attrs={'class':'form-control', 'placeholder':'example@gmail.com'}),
-				'password1':forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'contraseña'}),
+				'password1': forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'Usuario'}),
+				
 				
 		}
 
