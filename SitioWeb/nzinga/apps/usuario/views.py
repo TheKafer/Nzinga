@@ -13,8 +13,8 @@ from apps.usuario.models import Entity,Info_Entity
 def index(request):
 	return render(request, 'home/index.html')
 
-def base(request):
-	return render(request, 'base/base.html')
+def homeEntidad(request):
+	return render(request,'usuario/homeEntidad.html');
 
 
 def registroEntidad(request):
@@ -37,6 +37,9 @@ def registroEntidad(request):
 		'form': form,
 		'formEntidad': formEntidad,
 	})	
+
+
+
 
 # Ejemplo de como crearlo con una clase vista
 #class RegistroEntidad(CreateView):
