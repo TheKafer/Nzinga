@@ -13,6 +13,9 @@ from apps.usuario.models import Entity,Info_Entity
 def index(request):
 	return render(request, 'home/index.html')
 
+def base(request):
+	return render(request, 'base/base.html')
+
 
 def registroEntidad(request):
 	if request.method == 'POST':
@@ -27,8 +30,8 @@ def registroEntidad(request):
 			info_entity.save()
 			return redirect('home')
 	else:
-		form =RegistroUsuario()
-		formEntidad = RegistroEntidad()
+		form =RegistroUsuario( prefix='form')
+		formEntidad = RegistroEntidad(prefix = 'formEntidad')
 
 	return  render(request,'usuario/formularioEntidad.html', {
 		'form': form,

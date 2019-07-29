@@ -17,12 +17,18 @@
   		 <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}"> <img style="max-width:100px; margin-top: -7px;"
              src="{% static 'images/nzinga.png' %}"></a>
 	</nav>
-
+	<br>
+	</br>
 	<!-- Formularios -->
-	<div class="row"><p></p><br><div class="col-md-12"></div></div>
-	<div class="container center-block ">	
-		<form method="post">
-			{% csrf_token %}
+	<div class="row">
+		<div class="col-md-3 col-md-offset-3">
+
+		</div>
+		<div class="col-md-6">
+			
+			<div class="container center-block ">	
+				<form method="post">
+				{% csrf_token %}
 		
 				{{form.as_p}}
 			
@@ -36,8 +42,15 @@
 					</div>
 				</div>
 
-		</form>
+				</form>
+			</div>
+			
+		</div>
+		<div class="col-md-3 col-md-offset-3">
+
+		</div>
 	</div>
+
 	<br>
 	</br>
   <!-- Footer -->
@@ -61,5 +74,6 @@
       </div>
     </div>
   </footer>
+
 </body>
 </html>
